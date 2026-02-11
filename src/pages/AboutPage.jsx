@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { User, Music, Mic2, Award, Heart, Star } from 'lucide-react';
+import SparshUpadhayProfile from '../assets/SparshUpadhayProfile.jpg';
+import { User, Music, Mic2, Award, Heart, Star, Frown } from 'lucide-react';
 
 const AboutPage = () => {
   // Reuse scroll animation hook
@@ -94,10 +95,8 @@ const AboutPage = () => {
               
               <div className="about-image-wrapper reveal" style={{ flex: 1 }}>
                  {/* Placeholder for Founder Image */}
-                 <div className="faculty-image" style={{ height: '500px', marginBottom: 0 }}>
-                    <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.3, color: 'white', backgroundColor: '#44403c' }}>
-                      <User size={120} />
-                    </div>
+                 <div style={{ width: '100%', paddingTop: '100%', backgroundColor: '#333', borderRadius: '8px', position: 'relative' }}>
+                  <img src={SparshUpadhayProfile} alt="Prof. Sparsh Upadhyay" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }} />
                  </div>
               </div>
 
@@ -120,7 +119,6 @@ const AboutPage = () => {
                     <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Star size={18} /> 15+ Years Performing Artist</span>
                  </div>
               </div>
-
            </div>
         </div>
       </section>

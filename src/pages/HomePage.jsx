@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import tabla from '../assets/tabla.jpg';
 import live_band from '../assets/live_band.jpg';
 import studio from '../assets/studio.jpg';
+import SparshUpadhayProfile from '../assets/SparshUpadhayProfile.jpg'; // Placeholder for actual profile image
+import Team1 from '../assets/Team1.jpg'; // Placeholder for actual team image
+import sundTeam from '../assets/soundTeam.jpg'; // Placeholder for actual studio team image
 import { 
   Play, 
   Calendar, 
@@ -64,6 +67,7 @@ const HomePage = () => {
       name: "Prof. Sparsh Upadhyay",
       role: "Founder",
       bio: "Assistant Professor at Sarala Birla University. Master's in Indian Classical Music from Indira Kala Sangeet University (Asia's first dedicated Art & Culture University). 13+ years teaching & 15+ years performing experience.",
+      image:SparshUpadhayProfile, // Placeholder for actual image import
       bgColor: "#ffedd5",
       textColor: "#7c2d12"
     },
@@ -71,6 +75,7 @@ const HomePage = () => {
       name: "Professional Artists",
       role: "Live Band Team",
       bio: "A collective of high-caliber musicians available for concerts, high-class weddings, and special cultural programs.",
+      image:Team1, // Placeholder for actual team image
       bgColor: "#fef3c7",
       textColor: "#78350f"
     },
@@ -78,6 +83,7 @@ const HomePage = () => {
       name: "Sound Engineers",
       role: "Studio Team",
       bio: "Experienced recording artists providing professional vocal and instrument recording services in our fully equipped studio.",
+      image:sundTeam, // Placeholder for actual studio team image
       bgColor: "#f5f5f4",
       textColor: "#1c1917"
     }
@@ -210,16 +216,21 @@ const HomePage = () => {
           </p>
           
           <div className="hero-buttons">
-            <button className="btn-primary">
-              Start Learning
-            </button>
-            <button className="btn-secondary">
-              <div className="play-icon-circle">
-                <Play size={20} fill="currentColor" />
-              </div>
-              Watch Performance
-            </button>
-          </div>
+          <button className="btn-primary" onClick={() => window.location.href = '/Education'}>
+            Start Learning
+          </button>
+          <a 
+            href="https://youtu.be/uKhrKua7kIk?si=moEvNL_BXfQC6qMp" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn-secondary"
+          >
+            <div className="play-icon-circle">
+              <Play size={20} fill="currentColor" />
+            </div>
+            Watch Performance
+          </a>
+        </div>
         </div>
       </header>
     );
@@ -307,7 +318,7 @@ const HomePage = () => {
                  ))}
               </div>
               
-              <button className="btn-dark">
+              <button className="btn-dark" onClick={() => window.location.href = '/about'}>
                 Learn More
               </button>
             </div>
@@ -324,18 +335,16 @@ const FacultySection = () => (
             <span className="heading-subtitle">Mentorship</span>
             <h2 className="heading-xl" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>Founder & Team</h2>
           </div>
-          <button className="link-arrow hidden-mobile">
+          {/* <button className="link-arrow hidden-mobile">
             View All <ArrowRight size={16} />
-          </button>
+          </button> */}
         </div>
 
         <div className="faculty-grid">
           {faculty.map((member, idx) => (
             <div key={idx} className="faculty-card reveal" style={{ transitionDelay: `${idx * 150}ms` }}>
               <div className="faculty-image">
-                  <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.3, color: 'white' }}>
-                      <User size={80} />
-                  </div>
+                  <img src={member.image} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   
                   <div className="faculty-overlay">
                      <p className="uppercase font-bold text-saffron text-xs" style={{ marginBottom: '0.25rem' }}>{member.role}</p>

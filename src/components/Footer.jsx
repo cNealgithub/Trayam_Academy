@@ -62,7 +62,7 @@ const Footer = () => (
               "Contact",
             ].map((link) => (
               <li key={link}>
-                <a href="#">{link}</a>
+                <a href="/">{link}</a>
               </li>
             ))}
           </ul>
@@ -79,7 +79,7 @@ const Footer = () => (
               "Studio Recording",
             ].map((link) => (
               <li key={link}>
-                <a href="#">{link}</a>
+                <a href="/education">{link}</a>
               </li>
             ))}
           </ul>
@@ -115,6 +115,16 @@ const Footer = () => (
                 style={{ flexShrink: 0 }}
               />
               <span>+91 7025573133</span>
+            </li>
+            <li>
+              <Mail
+                size={16}
+                className="text-saffron"
+                style={{ flexShrink: 0 }}
+              />
+              <a href="mailto:Trayamclass@gmail.com">
+              <span>Trayamclass@gmail.com</span>
+              </a>
             </li>
           </ul>
         </div>

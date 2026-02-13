@@ -1,37 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import tabla from '../assets/tabla.jpg';
 import live_band from '../assets/live_band.jpg';
 import studio from '../assets/studio.jpg';
 import SparshUpadhayProfile from '../assets/SparshUpadhayProfile.jpg'; // Placeholder for actual profile image
 import Team1 from '../assets/Team1.jpg'; // Placeholder for actual team image
 import sundTeam from '../assets/soundTeam.jpg'; // Placeholder for actual studio team image
+import tanpura from '../assets/tanpura.mp3'; // Placeholder for actual tanpura audio file
 import { 
   Play, 
   Calendar, 
   User, 
   Music, 
   Star, 
-  Menu, 
-  X, 
-  Mail, 
-  Phone, 
   MapPin, 
   ArrowRight,
-  Feather,
-  Quote,
-  Drum, 
-  Mic, 
-  Mic2, // Changed for Studio/Recording context if avail, else Mic
+  Mic2,
+  Mic,
   Wind,
-  Headphones, // For Studio
-  Music4, // For Band
-  ChevronRight
+  ChevronRight,
+  Headphones,
+  Music4,
+  Quote,
+  Volume2,
+  VolumeX
 } from 'lucide-react';
-
-const HomePage = () => {
-
-
-
   // --- Mock Data ---
  // Part 1: Education
   const programs = [
@@ -484,21 +476,102 @@ const FacultySection = () => (
     </section>
   );
 
+// --- Main Page Component ---
 
-  // --- Logic Execution ---
+const HomePage = () => {
+  // --- Audio Logic ---
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    
+    audio.volume = 0.2; // Keep it subtle
+
+    // Function to attempt playing
+    const attemptPlay = () => {
+      audio.play()
+        .then(() => {
+          setIsPlaying(true);
+          document.removeEventListener('click', attemptPlay);
+          document.removeEventListener('scroll', attemptPlay);
+          document.removeEventListener('keydown', attemptPlay);
+        })
+        .catch((error) => {
+          // Autoplay blocked
+          setIsPlaying(false);
+        });
+    };
+
+    attemptPlay();
+
+    document.addEventListener('click', attemptPlay);
+    document.addEventListener('scroll', attemptPlay);
+    document.addEventListener('keydown', attemptPlay);
+
+    return () => {
+      document.removeEventListener('click', attemptPlay);
+      document.removeEventListener('scroll', attemptPlay);
+      document.removeEventListener('keydown', attemptPlay);
+    };
+  }, []);
+
+  const toggleAudio = () => {
+    const audio = audioRef.current;
+    if (audio) {
+      if (isPlaying) {
+        audio.pause();
+        setIsPlaying(false);
+      } else {
+        audio.play();
+        setIsPlaying(true);
+      }
+    }
+  };
+
   useScrollAnimation();
 
-  // --- Final Render ---
   return (
     <div className="bg-texture">
-      <Hero />
+      {/* Hidden Audio Player */}
+      <audio ref={audioRef} src={tanpura} loop />
+      
+      {/* Floating Control Button */}
+      <button 
+        onClick={toggleAudio}
+        style={{
+          position: 'fixed',
+          bottom: '2rem',
+          right: '2rem',
+          zIndex: 9999,
+          width: '3.5rem',
+          height: '3.5rem',
+          borderRadius: '50%',
+          backgroundColor: 'var(--color-saffron)',
+          color: 'white',
+          border: 'none',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: 'pointer',
+          transition: 'transform 0.3s'
+        }}
+        onMouseEnter={(e) => e.target.style.transform = 'scale(1.1)'}
+        onMouseLeave={(e) => e.target.style.transform = 'scale(1.0)'}
+        aria-label="Toggle Background Music"
+      >
+        {isPlaying ? <Volume2 size={24} /> : <VolumeX size={24} />}
+      </button>
+
+       <Hero />
       <AboutSection />
       <ProgramsSection />
       <QuotesSection />
       <FacultySection />
       <ServicesSection/>
       <EventsSection />
-    
     </div>
   );
 };

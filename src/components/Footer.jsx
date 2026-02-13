@@ -94,11 +94,17 @@ const Footer = () => (
                 className="text-saffron"
                 style={{ flexShrink: 0 }}
               />
-              <span>
-                Kanke Block,
-                <br />
-                Ranchi, Jharkhand
-              </span>
+              <a
+                href="https://www.google.com/maps?q=23.4256,85.3464"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>
+                  Kanke Block,
+                  <br />
+                  Ranchi, Jharkhand
+                </span>
+              </a>
             </li>
             <li>
               <Phone
@@ -106,7 +112,7 @@ const Footer = () => (
                 className="text-saffron"
                 style={{ flexShrink: 0 }}
               />
-              <span>+91 7771031921</span>
+              <span>+91 77710 31921</span>
             </li>
             <li>
               <Phone
@@ -114,7 +120,7 @@ const Footer = () => (
                 className="text-saffron"
                 style={{ flexShrink: 0 }}
               />
-              <span>+91 7025573133</span>
+              <span>+91 70255 73133</span>
             </li>
             <li>
               <Mail
@@ -123,7 +129,7 @@ const Footer = () => (
                 style={{ flexShrink: 0 }}
               />
               <a href="mailto:Trayamclass@gmail.com">
-              <span>Trayamclass@gmail.com</span>
+                <span>Trayamclass@gmail.com</span>
               </a>
             </li>
           </ul>

@@ -198,11 +198,11 @@ const HomePage = () => {
         {/* Abstract Decorative Elements */}
         <div className="mandala" style={{ width: '800px', height: '800px', animationDuration: '60s' }}></div>
         <div className="mandala" style={{ width: '600px', height: '600px', animationDuration: '40s', animationDirection: 'reverse' }}></div>
-  
+  {/* change the font to make it appear vibrantly  */}
         <div className="hero-content reveal active">
           <div className="hero-badges">
             <div className="hero-line"></div>
-            <p className="uppercase font-bold text-saffron text-sm">Kanke Block, Ranchi</p>
+            <p className="uppercase font-bold text-saffron text-sm" style={{ background: '-webkit-linear-gradient(#fff, #fdba74)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Kanke Block, Ranchi</p>
             <div className="hero-line"></div>
           </div>
           

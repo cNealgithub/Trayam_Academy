@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef} from 'react';
 import tabla from '../assets/tabla.jpg';
 import live_band from '../assets/live_band.jpg';
-import studio from '../assets/studio.jpg';
-import SparshUpadhayProfile from '../assets/SparshUpadhayProfile.jpg'; // Placeholder for actual profile image
+import studio1 from '../assets/studio1.jpg';
+import SparshUpadhayProfile from '../assets/SparshUpadhayProfile.png'; // Placeholder for actual profile image
 import Team1 from '../assets/Team1.jpg'; // Placeholder for actual team image
 import sundTeam from '../assets/soundTeam.jpg'; // Placeholder for actual studio team image
 import tanpura from '../assets/tanpura.mp3'; // Placeholder for actual tanpura audio file
@@ -99,7 +99,7 @@ import {
       title: "Recording Studio",
       excerpt: "State-of-the-art facility for vocal and instrument recording with professional support for artists.",
       tag: "Studio",
-      image: studio
+      image: studio1
     }
   ];
 

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import SparshUpadhayProfile from '../assets/SparshUpadhayProfile.jpg';
+import SparshUpadhayProfile from '../assets/SparshUpadhayProfile.png';
 import { User, Music, Mic2, Award, Heart, Star, Frown } from 'lucide-react';
 
 const AboutPage = () => {
@@ -88,7 +88,7 @@ const AboutPage = () => {
       </section>
 
       {/* Founder Section */}
-      <section className="section section-dark">
+      <section className="section section-dark" id='founder'>
         <div className="container">
            {/* Reusing about-layout class but forcing row direction for desktop */}
            <div className="about-layout" style={{ alignItems: 'flex-start' }}>
@@ -103,7 +103,7 @@ const AboutPage = () => {
               <div className="about-content reveal" style={{ flex: 1, paddingLeft: 'clamp(0px, 5vw, 2rem)', marginTop: '2rem' }}>
                  <div className="section-heading">
                     <span className="heading-subtitle" style={{ color: '#fb923c' }}>The Visionary</span>
-                    <h2 className="heading-lg" style={{ color: 'white' }}>Prof. Sparsh Upadhyay</h2>
+                    <h2 className="heading-lg" style={{ color: 'white' }}>Asst. prof. Sparsh Upadhyay</h2>
                     <div className="heading-divider" style={{ marginLeft: 0 }}></div>
                  </div>
                  

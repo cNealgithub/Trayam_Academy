@@ -9,6 +9,8 @@ import ContactPage from './pages/ContactPage.jsx'
 import './App.css'
 import Navigation from './components/Navigation.jsx'
 import Footer from './components/Footer.jsx'
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage.jsx';
+import TermsOfServicePage from './pages/TermsOfServicePage.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +25,8 @@ function App() {
         <Route path="/liveband" element={<LiveBandPage />} />
         <Route path="/studio" element={<StudioPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/privacy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms" element={<TermsOfServicePage />} />
       </Routes>
       <Footer/>
     </>

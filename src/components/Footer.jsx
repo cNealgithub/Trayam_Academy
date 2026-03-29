@@ -1,5 +1,6 @@
 import React from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -81,7 +82,7 @@ const Footer = () => {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="/about#founder">About Founder</a>
+                <Link to="/about">About Founder</Link>
               </li>
               <li>
                 <a href="/education">Education</a>

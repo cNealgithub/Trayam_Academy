@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Mic, Music, Wind, Headphones, CheckCircle } from 'lucide-react';
 
 const EducationPage = () => {
@@ -160,9 +161,9 @@ const EducationPage = () => {
          <div className="container reveal">
             <h3 className="heading-md" style={{ marginBottom: '1.5rem' }}>Ready to start your musical journey?</h3>
             <p style={{ marginBottom: '2rem', color: 'var(--color-text-muted)' }}>Admissions are open for the upcoming session. Book a trial class today.</p>
-            <a href="/contact" className="btn-primary">
+            <Link to="/contact" className="btn-primary">
                 Book a Trial Class  
-            </a>
+            </Link>
          </div>
       </section>
     </div>

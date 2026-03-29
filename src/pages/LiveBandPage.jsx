@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Fusion from "../assets/Fusion.png";
 import Wedding from "../assets/Wedding.png";
 import CorporateGala from "../assets/CorporateGala.png";
+import { Link } from "react-router-dom";
 import SufiNight from "../assets/SufiNight.png";
 import {
   Music4,
@@ -420,9 +421,9 @@ const LiveBandPage = () => {
             Get in touch to check our availability and discuss your
             requirements.
           </p>
-          <a href="/contact" className="btn-primary">
+          <Link to="/contact" className="btn-primary">
             Book Us Now
-          </a>
+          </Link>
         </div>
       </section>
     </div>

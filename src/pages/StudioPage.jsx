@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Mic, Headphones, Sliders, Music, Speaker, CheckCircle, Settings, Layers } from 'lucide-react';
 
 const StudioPage = () => {
@@ -177,9 +178,9 @@ const StudioPage = () => {
          <div className="container reveal">
             <h3 className="heading-md" style={{ marginBottom: '1.5rem' }}>Ready to Record?</h3>
             <p style={{ marginBottom: '2rem', color: 'var(--color-text-muted)' }}>Book your studio session today and bring your music to life.</p>
-            <a href="/contact" className="btn-primary">
+            <Link to="/contact" className="btn-primary">
                 Book a Session  
-            </a>
+            </Link>
          </div>
       </section>
     </div>

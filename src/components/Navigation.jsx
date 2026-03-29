@@ -74,7 +74,7 @@ const Navigation = () => {
               {link.name}
             </Link>
           ))}
-          <button className="btn-join" style={{ width: '100%', textAlign: 'center', color: 'white', borderColor: 'white' }}>Join Trayam</button>
+          <Link to="/contact" className="btn-join" style={{ width: '100%', textAlign: 'center', color: 'white', borderColor: 'white' }}>Join Trayam</Link>
         </div>
       )}
     </nav>

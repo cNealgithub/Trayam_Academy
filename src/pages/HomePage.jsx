@@ -212,9 +212,9 @@ import {
           </p>
           
           <div className="hero-buttons">
-          <button className="btn-primary" onClick={() => window.location.href = '/Education'}>
+          <Link className="btn-primary" to="/education">
             Start Learning
-          </button>
+          </Link>
           <a 
             href="https://youtu.be/uKhrKua7kIk?si=moEvNL_BXfQC6qMp" 
             target="_blank" 
@@ -246,9 +246,9 @@ import {
     const ProgramCard = ({ program, index }) => (
       <div className="program-card reveal" style={{ transitionDelay: `${index * 100}ms` }}>
         <div className="program-arrow">
-          <a href="/education" className="read-link">
+          <Link to="/education" className="read-link">
             <ArrowRight size={20} />
-          </a>
+          </Link>
         </div>
   
         <div className="card-icon">
@@ -466,17 +466,17 @@ const FacultySection = () => (
                   <span className="flex-center" style={{ gap: '0.25rem' }}><Calendar size={12} /> {event.time}</span>
                 </div>
               </div>
-              <a href="/contact" className="btn-event">
+              <Link to="/contact" className="btn-event">
                 Contact
-              </a>
+              </Link>
             </div>
           ))}
         </div>
         
         <div className="text-center reveal" style={{ marginTop: '3rem' }}>
-          <a href="/contact" style={{ borderBottom: '2px solid #fed7aa', paddingBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.75rem', fontWeight: 700, color: '#78716c' }}>
+          <Link to="/contact" style={{ borderBottom: '2px solid #fed7aa', paddingBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.75rem', fontWeight: 700, color: '#78716c' }}>
               Book an Appointment
-          </a>
+          </Link>
         </div>
       </div>
     </section>

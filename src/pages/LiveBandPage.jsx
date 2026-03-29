@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Fusion from "../assets/Fusion.png";
 import Wedding from "../assets/Wedding.png";
 import CorporateGala from "../assets/CorporateGala.png";
-import sufiNight from "../assets/sufiNight.png";
+import SufiNight from "../assets/SufiNight.png";
 import {
   Music4,
   Mic2,
@@ -91,7 +91,7 @@ const LiveBandPage = () => {
       caption: "Annual Sufi Night Concert",
       location: " ",
       color: "#fca5a5",
-      image: sufiNight
+      image: SufiNight
     },
     {
       caption: "Royal Wedding Sangeet",

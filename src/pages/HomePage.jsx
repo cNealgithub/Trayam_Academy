@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef} from 'react';
 import tabla from '../assets/tabla.jpg';
 import live_band from '../assets/live_band.jpg';
 import studio1 from '../assets/studio1.jpg';
+import { Link } from 'react-router-dom';
 import SparshUpadhayProfile from '../assets/SparshUpadhayProfile.png'; // Placeholder for actual profile image
 import Team1 from '../assets/Team1.jpg'; // Placeholder for actual team image
 import sundTeam from '../assets/soundTeam.jpg'; // Placeholder for actual studio team image
@@ -22,7 +23,7 @@ import {
   Music4,
   Quote,
   Volume2,
-  VolumeX
+  VolumeX,
 } from 'lucide-react';
   // --- Mock Data ---
  // Part 1: Education
@@ -315,9 +316,9 @@ import {
                  ))}
               </div>
               
-              <button className="btn-dark" onClick={() => window.location.href = '/about'}>
+              <Link className="btn-dark" to="/about">
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -433,9 +434,9 @@ const FacultySection = () => (
                 <p style={{ fontSize: '0.875rem', lineHeight: 1.6, color: 'var(--color-text-muted)' }}>
                   {service.excerpt}
                 </p>
-                <a href={service.link} className="read-link">
+                <Link to={service.link} className="read-link">
                   Learn More <ChevronRight size={12} />
-                </a>
+                </Link>
               </div>
             </div>
           ))}

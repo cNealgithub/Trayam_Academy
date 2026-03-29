@@ -8,15 +8,18 @@ import StudioPage from './pages/StudioPage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 import './App.css'
 import Navigation from './components/Navigation.jsx'
+import ScrollToTop from './components/ScrollToTop.jsx'
 import Footer from './components/Footer.jsx'
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage.jsx';
 import TermsOfServicePage from './pages/TermsOfServicePage.jsx';
+import { Scroll } from 'lucide-react'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <ScrollToTop />
       <Navigation />
       <Routes>
         <Route path="/" element={<HomePage />} />

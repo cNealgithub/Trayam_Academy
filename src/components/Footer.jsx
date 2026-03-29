@@ -192,6 +192,8 @@ export default Footer;
 
 // import { Mail, Phone, MapPin } from "lucide-react";
 
+
+
 // const Footer = () => (
 //   <footer className="footer">
 //     <div className="container">

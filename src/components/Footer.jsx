@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react";  
 import { MapPin, Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -79,22 +79,22 @@ const Footer = () => {
             <h4 className="footer-title">Explore</h4>
             <ul className="footer-links">
               <li>
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
                 <Link to="/about">About Founder</Link>
               </li>
               <li>
-                <a href="/education">Education</a>
+                <Link to="/education">Education</Link>
               </li>
               <li>
-                <a href="/live-band">Live Band</a>
+                <Link to="/live-band">Live Band</Link>
               </li>
               <li>
-                <a href="/studio">Recording Studio</a>
+                <Link to="/studio">Recording Studio</Link>
               </li>
               <li>
-                <a href="/contact">Contact</a>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </div>
@@ -104,19 +104,19 @@ const Footer = () => {
             <h4 className="footer-title">Services</h4>
             <ul className="footer-links">
               <li>
-                <a href="/education">Vocal Training</a>
+                <Link to="/education">Vocal Training</Link>
               </li>
               <li>
-                <a href="/education">Instrumental Mastery</a>
+                <Link to="/education">Instrumental Mastery</Link>
               </li>
               <li>
-                <a href="/liveband">Concert Booking</a>
+                <Link to="/liveband">Concert Booking</Link>
               </li>
               <li>
-                <a href="/liveband">Wedding Band</a>
+                <Link to="/liveband">Wedding Band</Link>
               </li>
               <li>
-                <a href="/studio">Studio Recording</a>
+                <Link to="/studio">Studio Recording</Link>
               </li>
             </ul>
           </div>
@@ -179,8 +179,8 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Trayam Music. All rights reserved.
           </p>
           <div style={{ display: "flex", gap: "1.5rem" }}>
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms of Service</a>
+            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/terms">Terms of Service</Link>
           </div>
         </div>
       </div>

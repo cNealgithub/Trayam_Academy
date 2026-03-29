@@ -57,7 +57,9 @@ const Navigation = () => {
               {link.name}
             </Link>
           ))}
-          <button className="btn-join">Join Trayam</button>
+          <a href="/contact" className="btn-join" style={{ marginLeft: '1rem' }}>
+             Join Trayam
+          </a>
         </div>
 
         <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>

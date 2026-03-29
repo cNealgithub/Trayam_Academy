@@ -160,7 +160,9 @@ const EducationPage = () => {
          <div className="container reveal">
             <h3 className="heading-md" style={{ marginBottom: '1.5rem' }}>Ready to start your musical journey?</h3>
             <p style={{ marginBottom: '2rem', color: 'var(--color-text-muted)' }}>Admissions are open for the upcoming session. Book a trial class today.</p>
-            <button className="btn-primary">Enroll Now</button>
+            <a href="/contact" className="btn-primary">
+                Book a Trial Class  
+            </a>
          </div>
       </section>
     </div>

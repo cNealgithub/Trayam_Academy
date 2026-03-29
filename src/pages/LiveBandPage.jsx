@@ -280,13 +280,13 @@ const LiveBandPage = () => {
                 borderColor: "var(--color-text-main)",
               }}
             >
-              <div
+              {/* <div
                 className="play-icon-circle"
                 style={{ borderColor: "var(--color-text-main)" }}
               >
                 <Play size={20} fill="currentColor" />
               </div>
-              Watch Our Showreel
+              Watch Our Showreel */}
             </button>
           </div>
         </div>
@@ -420,7 +420,9 @@ const LiveBandPage = () => {
             Get in touch to check our availability and discuss your
             requirements.
           </p>
-          <button className="btn-primary">Book The Band</button>
+          <a href="/contact" className="btn-primary">
+            Book Us Now
+          </a>
         </div>
       </section>
     </div>

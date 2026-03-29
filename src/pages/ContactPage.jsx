@@ -109,7 +109,9 @@ const ContactPage = () => {
                  <div className="card-icon" style={{ margin: '0 auto 1.5rem' }}><Mail size={24} /></div>
                  <h3 className="heading-md" style={{ marginBottom: '0.75rem' }}>Email Us</h3>
                  <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem' }}>
-                    contact@trayam.in<br/>admissions@trayam.in
+                   <a href="mailto:Trayamclass@gmail.com" style={{ color: 'var(--color-saffron)', textDecoration: 'underline' }}>
+                     Trayamclass@gmail.com
+                   </a>
                  </p>
               </div>
               <div className="program-card reveal" style={{ textAlign: 'center' }}>

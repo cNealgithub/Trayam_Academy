@@ -87,19 +87,22 @@ import {
       title: "Music Education",
       excerpt: "Comprehensive training in Indian Classical, Sufi, Bollywood, and instruments like Tabla, Harmonium, Guitar, and Keyboard.",
       tag: "Academy",
-      image: tabla
+      image: tabla,
+      link: "/education"
     },
     {
       title: "Trayam Live Band",
       excerpt: "Book us for Concerts, Weddings, and Special Events. We bring the soul of music to your special occasions.",
       tag: "Live Music",
-      image: live_band
+      image: live_band,
+      link: "/liveband"
     },
     {
       title: "Recording Studio",
       excerpt: "State-of-the-art facility for vocal and instrument recording with professional support for artists.",
       tag: "Studio",
-      image: studio1
+      image: studio1,
+      link: "/studio"
     }
   ];
 
@@ -242,7 +245,9 @@ import {
     const ProgramCard = ({ program, index }) => (
       <div className="program-card reveal" style={{ transitionDelay: `${index * 100}ms` }}>
         <div className="program-arrow">
-          <ArrowRight size={20} />
+          <a href="/education" className="read-link">
+            <ArrowRight size={20} />
+          </a>
         </div>
   
         <div className="card-icon">
@@ -428,8 +433,8 @@ const FacultySection = () => (
                 <p style={{ fontSize: '0.875rem', lineHeight: 1.6, color: 'var(--color-text-muted)' }}>
                   {service.excerpt}
                 </p>
-                <a href="#" className="read-link">
-                  Explore <ChevronRight size={12} />
+                <a href={service.link} className="read-link">
+                  Learn More <ChevronRight size={12} />
                 </a>
               </div>
             </div>
@@ -460,15 +465,15 @@ const FacultySection = () => (
                   <span className="flex-center" style={{ gap: '0.25rem' }}><Calendar size={12} /> {event.time}</span>
                 </div>
               </div>
-              <button className="btn-event">
+              <a href="/contact" className="btn-event">
                 Contact
-              </button>
+              </a>
             </div>
           ))}
         </div>
         
         <div className="text-center reveal" style={{ marginTop: '3rem' }}>
-          <a href="#" style={{ borderBottom: '2px solid #fed7aa', paddingBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.75rem', fontWeight: 700, color: '#78716c' }}>
+          <a href="/contact" style={{ borderBottom: '2px solid #fed7aa', paddingBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.75rem', fontWeight: 700, color: '#78716c' }}>
               Book an Appointment
           </a>
         </div>

@@ -177,7 +177,9 @@ const StudioPage = () => {
          <div className="container reveal">
             <h3 className="heading-md" style={{ marginBottom: '1.5rem' }}>Ready to Record?</h3>
             <p style={{ marginBottom: '2rem', color: 'var(--color-text-muted)' }}>Book your studio session today and bring your music to life.</p>
-            <button className="btn-primary">Book Session</button>
+            <a href="/contact" className="btn-primary">
+                Book a Session  
+            </a>
          </div>
       </section>
     </div>
